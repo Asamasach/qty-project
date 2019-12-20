@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<script type="text/javascript">
+
+  setTimeout(function(){
+
+    location = ''
+
+  },10000)
+
+</script>
+<head> 
+	<h1>
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	theme: "light1", // "light1", "light2", "dark1", "dark2"
+	title:{
+		text: "Sewed quantity chart - Khoy Textile"
+	},
+	axisY: {
+		title: "Quantity"
+	},
+	data: [{        
+		type: "column",  
+		showInLegend: true, 
+		legendMarkerColor: "grey",
+		dataPoints: [
+			{ y: {{qty_day}}, label: "today pulsed = {{qty_day}}" },
+			{ y: {{qty_yesterday}},  label: "yesterday pulsed = {{qty_yesterday}}" },
+			{ y: {{qty_theotherday}},  label: "the other day pulsed = {{qty_theotherday}}" },
+			{ y: {{qty_3ago}},  label: "3 days ago pulsed = {{qty_3ago}}" },
+			{ y: {{qty_4ago}},  label: "4 days ago pulsed = {{qty_4ago}}"},
+			{ y: {{qty_5ago}},  label: "5 days ago pulsed = {{qty_5ago}}" },
+			{ y: {{qty_6ago}},  label: "6 days ago pulsed = {{qty_6ago}}" }
+		]
+	}]
+});
+
+var chart1 = new CanvasJS.Chart("chartContainer1", {
+	animationEnabled: true,
+	theme: "light2", // "light1", "light2", "dark1", "dark2"
+	title:{
+		text: "Sewed quantity chart - Khoy Textile1"
+	},
+	axisY: {
+		title: "Quantity1"
+	},
+	data: [{        
+		type: "column",  
+		showInLegend: true, 
+		legendMarkerColor: "grey",
+		dataPoints: [
+			{ y: {{qty_day}}, label: "today pulsed = {{qty_day}}" },
+			{ y: {{qty_yesterday}},  label: "yesterday pulsed = {{qty_yesterday}}" },
+			{ y: {{qty_theotherday}},  label: "the other day pulsed = {{qty_theotherday}}" },
+			{ y: {{qty_3ago}},  label: "3 days ago pulsed = {{qty_3ago}}" },
+			{ y: {{qty_4ago}},  label: "4 days ago pulsed = {{qty_4ago}}"},
+			{ y: {{qty_5ago}},  label: "5 days ago pulsed = {{qty_5ago}}" },
+			{ y: {{qty_6ago}},  label: "6 days ago pulsed = {{qty_6ago}}" }
+		]
+	}]
+});
+chart.render();
+chart1.render();
+
+}
+</script>
+
+	</h1>
+                <h1 style="text-align: center;">
+                        <button style=" color: black; text-align: center; font-size: 30px" onclick="window.location.href='/'">Home</button>
+                        <button style=" color: black; text-align: center; font-size: 30px" onclick="window.location.href='/total'">Summary</button>                     
+			<button style=" color: black; text-align: center; font-size: 30px" onclick="window.location.href='/today'">Today</button>               
+		</h1>
+
+
+
+</head>
+<body>
+<h1>
+<div id="chartContainer"></div></br>
+</h1></br>
+<h1>
+<div id="chartContainer1"></div>
+</h1>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+</body>
+
+</html>

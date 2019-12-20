@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<script type="text/javascript">
+
+  setTimeout(function(){
+
+    location = ''
+
+  },10000)
+
+</script>
+
+	<h1>
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	theme: "light1", // "light1", "light2", "dark1", "dark2"
+	title:{
+		text: "Khoy Textile - End of the line"
+	},
+	axisY: {
+		title: "Line Output"
+	},
+	data: [{        
+		type: "column",  
+		showInLegend: true, 
+		legendMarkerColor: "grey",
+		dataPoints: [
+			{ y: {{qty_day_out}}, label: "today pulsed = {{qty_day_out}}" },
+			{ y: {{qty_yesterday_out}},  label: "yesterday pulsed = {{qty_yesterday_out}}" },
+			{ y: {{qty_theotherday_out}},  label: "the other day pulsed = {{qty_theotherday_out}}" },
+			{ y: {{qty_3ago_out}},  label: "3 days ago pulsed = {{qty_3ago_out}}" },
+			{ y: {{qty_4ago_out}},  label: "4 days ago pulsed = {{qty_4ago_out}}"},
+			{ y: {{qty_5ago_out}},  label: "5 days ago pulsed = {{qty_5ago_out}}" },
+			{ y: {{qty_6ago_out}},  label: "6 days ago pulsed = {{qty_6ago_out}}" }
+		]
+	}]
+});
+
+var chart1 = new CanvasJS.Chart("chartContainer1", {
+	animationEnabled: true,
+	theme: "light1", // "light1", "light2", "dark1", "dark2"
+	title:{
+		text: "Khoy Textile - Middle of the line"
+	},
+	axisY: {
+		title: "Line Middle"
+	},
+	data: [{        
+		type: "column",  
+		showInLegend: true, 
+		legendMarkerColor: "grey",
+		dataPoints: [
+			{ y: {{qty_day_mid}}, label: "today pulsed = {{qty_day_mid}}" },
+			{ y: {{qty_yesterday_mid}},  label: "yesterday pulsed = {{qty_yesterday_mid}}" },
+			{ y: {{qty_theotherday_mid}},  label: "the other day pulsed = {{qty_theotherday_mid}}" },
+			{ y: {{qty_3ago_mid}},  label: "3 days ago pulsed = {{qty_3ago_mid}}" },
+			{ y: {{qty_4ago_mid}},  label: "4 days ago pulsed = {{qty_4ago_mid}}"},
+			{ y: {{qty_5ago_mid}},  label: "5 days ago pulsed = {{qty_5ago_mid}}" },
+			{ y: {{qty_6ago_mid}},  label: "6 days ago pulsed = {{qty_6ago_mid}}" }
+		]
+	}]
+});
+
+
+var chart2 = new CanvasJS.Chart("chartContainer2", {
+	animationEnabled: true,
+	theme: "light1", // "light1", "light2", "dark1", "dark2"
+	title:{
+		text: "Khoy Textile - Begining of the line"
+	},
+	axisY: {
+		title: "Line Input"
+	},
+	data: [{        
+		type: "column",  
+		showInLegend: true, 
+		legendMarkerColor: "grey",
+		dataPoints: [
+			{ y: {{qty_day_in}}, label: "today pulsed = {{qty_day_in}}" },
+			{ y: {{qty_yesterday_in}},  label: "yesterday pulsed = {{qty_yesterday_in}}" },
+			{ y: {{qty_theotherday_in}},  label: "the other day pulsed = {{qty_theotherday_in}}" },
+			{ y: {{qty_3ago_in}},  label: "3 days ago pulsed = {{qty_3ago_in}}" },
+			{ y: {{qty_4ago_in}},  label: "4 days ago pulsed = {{qty_4ago_in}}"},
+			{ y: {{qty_5ago_in}},  label: "5 days ago pulsed = {{qty_5ago_in}}" },
+			{ y: {{qty_6ago_in}},  label: "6 days ago pulsed = {{qty_6ago_in}}" }
+		]
+	}]
+});
+chart.render();
+chart1.render();
+chart2.render();
+}
+</script>
+
+	</h1>
+
+
+<div id="chartContainer" style="width: 100% ; height: 300px;display: inline-block;"></div>
+
+<div id="chartContainer1" style="width: 100%; height: 300px;display: inline-block;" ></div>
+
+<div id="chartContainer2" style="width: 100%; height: 300px;display: inline-block;" ></div>
+
+                <h1 style="text-align: center;">
+                        <button style=" color: black; text-align: center; font-size: 30px" onclick="window.location.href='/'">Home</button>
+                        <button style=" color: black; text-align: center; font-size: 30px" onclick="window.location.href='/total'">Summary</button>                     
+			<button style=" color: black; text-align: center; font-size: 30px" onclick="window.location.href='/today'">Today</button>               
+		</h1>
+
+
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+
+</html>
